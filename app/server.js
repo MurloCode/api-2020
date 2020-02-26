@@ -60,6 +60,8 @@ class Server {
    * routes
    */
   routes () {
+    new routes.Users(this.app, this.connect)
+
     this.app.use((req, res) => {
       res.status(404).json({
         'code': 404,
